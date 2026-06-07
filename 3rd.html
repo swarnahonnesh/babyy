@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Video Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            overflow:hidden;
+            font-family:Arial, sans-serif;
+
+            /* Pink + Blue Beautiful Background */
+            background: linear-gradient(
+                135deg,
+                #ff9ad5,
+                #ffd6f3,
+                #a0c4ff,
+                #6ec5ff
+            );
+
+            background-size:400% 400%;
+            animation:bgMove 10s infinite alternate;
+        }
+
+        @keyframes bgMove{
+            0%{
+                background-position:left;
+            }
+            100%{
+                background-position:right;
+            }
+        }
+
+        .video-box{
+            width:80%;
+            max-width:800px;
+            border-radius:25px;
+            overflow:hidden;
+
+            
+
+            backdrop-filter: blur(10px);
+
+            transition:0.4s;
+        }
+
+        .video-box:hover{
+            transform:scale(1.02);
+        }
+
+        video{
+            width:100%;
+            display:block;
+        }
+        .caption{
+            margin-top:20px;
+            font-size:38px;
+            color:white;
+            font-family:'Pacifico', cursive;
+
+            text-shadow:
+                0 0 10px rgba(255,255,255,0.8),
+                0 0 20px rgba(255,105,180,0.7);
+
+            -webkit-text-stroke: 1px #f786bc;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="video-box">
+
+        <!-- Replace video.mp4 with your video name -->
+        <video controls autoplay muted loop>
+            <source src="us.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+      
+    </div>
+    <div class="caption">
+            .yeno nan kaili agidd madidini, video chanagilla andre ottege haaka
+            
+    </div>
+</body>
+</html>
